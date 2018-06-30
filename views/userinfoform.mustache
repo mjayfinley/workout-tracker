@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form action="/userUpdateForm" method="post">
+      <input type="text" name="firstName" placeholder="enter first name">
+      <input type="text" name="lastName" placeholder="enter last name">
+      <input type="text" name="age" placeholder="enter age">
+      <input type="text" name="gender" placeholder="enter gender">
+      <input type="text" name="weight" placeholder="enter weight">
+      <input type="text" name="height" placeholder="enter height">
+      <input type="text" name="activityLevel" placeholder="enter activity level">
+      <input type="text" name="city" placeholder="enter city">
+      <input type="text" name="state" placeholder="enter state">
+      <input type="text" name="goals" placeholder="enter goals">
+
+      <input type="hidden" name="userId" value='{{userid}}'>
+      <input type="submit" value="Update">
+    </form>
+
+  </body>
+</html>

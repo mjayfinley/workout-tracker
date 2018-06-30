@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form action="/addUserWorkout/{{id}}" method="post">
+      <input type='text' name='exercise' placeholder='exercise name'>
+      <input type='text' name='time' placeholder='exercise time'>
+      <input type='text' name='miles' placeholder='miles'>
+      <input type='text' name='weight' placeholder='weight'>
+      <input type='text' name='reps' placeholder='reps'>
+
+      <input type='hidden' name='userId' value='{{id}}'>
+      <input type='submit' value="Add Workout">
+
+
+    </form>
+
+
+    {{#workouts}}
+      {{exercise}}
+      {{time}}
+      {{miles}}
+      {{workout.weight}}
+      {{reps}}
+      {{userid}}
+    {{/workouts}}
+
+  </body>
+</html>
