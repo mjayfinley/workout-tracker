@@ -140,7 +140,7 @@ app.get('/userworkouts/:id', (req,res) => {
 
   let userId = req.params.id
 
-  models.Workout.findOne({
+  models.Workout.findAll({
     where: {
       userid : userId
     }
