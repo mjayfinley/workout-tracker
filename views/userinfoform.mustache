@@ -1,224 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
-
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
   </head>
-<body>
-{{! NAVBAR }}
-<!-- Image and text -->
-<nav class="navbar sticky-top navbar-light bg-light">
-  <a class="navbar-brand" href="/">
-    <img src="gym-logo.png" width="100" height="70" class="d-inline-block align-top" alt="">
-  </a>
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/about-us">About Us</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/things-todo">Things To Do</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link modal-navbar" href="#panel7" data-toggle="modal" data-target="#modalRegisterForm">Login/Register</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link modal-navbar" href="/logout" data-toggle="modal" data-target="#modalRegisterForm">{{logout}}</a>
-  </li>
-  {{! <li class="nav-item">
-    <a class="nav-link" href='/logout'>Logout</a>   //Backup logout
-  </li> }}
-</ul>
-</nav>
-{{! END NAVBAR }}
-{{! Begin Container }}
-<div class="container" id="formContainer">
+  <body>
 
-{{! Begin CARD }}
-<div class="card card-body">
-    <h4 class="card-title">User Information</h4>
+    <form action="/userUpdateForm" method="post">
+      <input type="text" name="firstName" placeholder="enter first name">
+      <input type="text" name="lastName" placeholder="enter last name">
+      <input type="text" name="age" placeholder="enter age">
+      <input type="text" name="gender" placeholder="enter gender">
+      <input type="text" name="weight" placeholder="enter weight">
+      <input type="text" name="height" placeholder="enter height">
+      <input type="text" name="activityLevel" placeholder="enter activity level">
+      <input type="text" name="city" placeholder="enter city">
+      <input type="text" name="state" placeholder="enter state">
+      <input type="text" name="goals" placeholder="enter goals">
 
-{{! Begin Form }}
-<form action='/updateUserForm' method='post'>
-<div class="form">
-  <div class="row">
-    <div class="col">First name:
-      <input type="text" class="form-control" placeholder="Enter your first name" name="firstName">
-    </div>
-    <div class="col">Last Name:
-      <input type="text" class="form-control" placeholder="Enter your last name" name="lastName">
-    </div>
-  </div>
-</div>
-  <br>
-    <div class="form-group">
-      <label>Age:</label>
-      <input type="text" class="form-control" name="age" placeholder="Enter your age... ex. 21">
-    </div>
-
-    <div class="form-group">
-      <label>Gender: Male, Female, or Other</label>
-      <input class="form-control" type="text" name="gender" placeholder="Enter your gender." >
-    </div>
-    <br>
-
-    <div class="form-group">
-      <label for="weight">Weight</label>
-      <input type="text" class="form-control" name="weight">lbs
-    </div>
-
-    <div class="form-group">
-      <label>Height:</label>
-      <input type="text" class="form-control" name="height" placeholder="Enter your height in inches...ex. 72">
-    </div>
-
-
-    <div class="form-group">
-      <label>City:</label>
-      <input class="form-control" type="text" name="city" placeholder="Enter your city.... ex. Houston">
-    </div>
-    <br>
-
-    <div class="form-group">
-      <label>State:</label>
-      <input class="form-control" type="text" name="state" placeholder="Enter your state.... ex. Texas">
-    </div>
-    <br>
-
-    <div class=form-group>
-      <label>Describe your activity level on a scale 0-10 (0 = none, 10 = nonstop):</label>
-    <br>
-      <textarea class="form-control" rows="5" id="comment" name="activityLevel" placeholder="0 - 10"></textarea>
-    </div>
-    <br>
-    <div class="form-group">
-      <label>Describe your Goals:</label>
-        <textarea class="form-control" rows="5" id="comment" name="goals" placeholder="Ex. Lose weight, maintain weight, get cut etc"></textarea>
-    </div>
-<br>
-<br>
-      <div>
-        <input type="hidden" name="userId" value='{{userid}}'>
-        <input type="submit" value="Update">
-      </div>
-
-
-</form>
-{{! End Form }}
-</form>
-{{! End CARD }}
-</div>
-{{! End Container }}
-</div>
-
-!-- Footer -->
-<footer class="page-footer font-small mdb-color lighten-3 pt-4 mt-4">
-
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
-        <p>Here you can use rows and columns here to organize your footer content.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum.</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
-
-        <ul class="list-unstyled">
-          <li><p><a href="#!">PROJECTS</a></p></li>
-          <li><p><a href="#!">ABOUT US</a></p></li>
-          <li><p><a href="#!">BLOG</a></p></li>
-          <li><p><a href="#!">AWARDS</a></p></li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Contact details -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
-
-        <ul class="list-unstyled">
-          <li><p><i class="fa fa-home mr-3"></i> New York, NY 10012, US</p></li>
-          <li><p><i class="fa fa-envelope mr-3"></i> info@example.com</p></li>
-          <li><p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p></li>
-          <li><p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p></li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-
-        <!-- Social buttons -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-
-        <!-- Facebook -->
-        <a type="button" class="btn-floating btn-fb"><i class="fa fa-facebook"></i></a>
-        <!-- Twitter -->
-        <a type="button" class="btn-floating btn-tw"><i class="fa fa-twitter"></i></a>
-        <!-- Google +-->
-        <a type="button" class="btn-floating btn-gplus"><i class="fa fa-google-plus"></i></a>
-        <!-- Dribbble -->
-        <a type="button" class="btn-floating btn-dribbble"><i class="fa fa-dribbble"></i></a>
-
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
-</body>
-<!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+      <input type="hidden" name="userId" value='{{userid}}'>
+      <input type="submit" value="Update">
+    </form>
 
   </body>
 </html>

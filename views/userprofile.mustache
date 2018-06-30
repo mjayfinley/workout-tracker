@@ -1,213 +1,45 @@
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+    {{#users}}
+      <li>
+      {{firstname}} {{lastname}}
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link href="style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<header>
-<!-- Image and text -->
-<nav class="navbar sticky-top navbar-light bg-light">
-  <a class="navbar-brand" href="/">
-    <img src="gym-logo.png" width="100" height="70" class="d-inline-block align-top" alt="">
-  </a>
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="about-us">About Us</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/things-todo">Things To Do</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link modal-navbar" href="#panel7" data-toggle="modal" data-target="#modalRegisterForm">Login/Register</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link modal-navbar" href="/logout" data-toggle="modal" data-target="#modalRegisterForm">{{logout}}</a>
-  </li>
-  {{! <li class="nav-item">
-    <a class="nav-link" href='/logout'>Logout</a>   //Backup logout
-  </li> }}
-</ul>
-</nav>
-{{! END NAVBAR }}
-</header>
-{{! Card }}
-<div class="container" id="profileContainer">
-  <div class="card text-center">
-      {{! Image uploader }}
-        <div>
-          <form action="/addImage" method="post">
-            <img class="profile-pic" src="http://www.sbcs.edu.tt/wp-content/uploads/2016/04/profile-default.png" />
-            <div class="upload-button btn btn-mdb-color btn-rounded float-left">Add photo</div>
-            <input type="file" class="file-upload" name="imageURL" accept="image/*">
-          </form>
-        </div>
-        {{! Image uploader }}
-      <h3 class="card-header primary-color white-text">
-      {{#users}}{{firstname}} {{lastname}}{{/users}}
-      </h3>
-      <div class="card-body">
-        <table class="table table-striped">
-            <tbody class="container text-center">
-            {{#users}}
-            <tr>
-                <td>Age:</td>
-                <td>{{age}}</td>
-            </tr>
-             <tr>
-                <td>Gender:</td>
-                <td>{{gender}}</td>
-            </tr>
-            <tr>
-                <td>Weight:</td>
-                <td>{{weight}} lbs.</td>
-            </tr>
-            <tr>
-                <td>Height:</td>
-                <td>{{height}} inches</td>
-            </tr>
-            <tr>
-                <td>City:</td>
-                <td>{{city}}</td>
-            </tr>
-            <tr>
-                <td>State:</td>
-                <td>{{state}}</a></td>
-            </tr>
-            <tr>
-                <td>Activity Level:</td>
-                <td>{{activitylevel}} out of 10.</td>
-            </tr>
-            <tr>
-                <td>Goals:</td>
-                <td>{{goals}}</td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td>{{email}}</td>
-            </tr>
-            {{/users}}
-            </tbody>
-        </table>
-        <div class="flex-row">
-              <a class="card-link" href='/userworkouts/{{id}}'>Add Workout</a>
-        </div>
-      </div>
-  </div>
-</div>
-{{! Card }}
+      {{age}}
+
+      {{gender}}
+
+      {{weight}}
+
+      {{height}}
+
+      {{activitylevel}}
+
+      {{city}}
+
+      {{state}}
+
+      {{goals}}
+
+      {{email}}
+
+      <a href='/userworkouts/{{id}}'>Add Workout</a>
+
+      </li>
+
+    {{/users}}
+    <ul>
+
+
+      <a href='/logout'>Logout</a>
+    
 
 
 
-    <!-- Footer -->
-<footer class="page-footer font-small mdb-color lighten-3 pt-4 mt-4">
-
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
-        <p>Here you can use rows and columns here to organize your footer content.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum.</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
-
-        <ul class="list-unstyled">
-          <li><p><a href="#!">PROJECTS</a></p></li>
-          <li><p><a href="#!">ABOUT US</a></p></li>
-          <li><p><a href="#!">BLOG</a></p></li>
-          <li><p><a href="#!">AWARDS</a></p></li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Contact details -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
-
-        <ul class="list-unstyled">
-          <li><p><i class="fa fa-home mr-3"></i> New York, NY 10012, US</p></li>
-          <li><p><i class="fa fa-envelope mr-3"></i> info@example.com</p></li>
-          <li><p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p></li>
-          <li><p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p></li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-
-        <!-- Social buttons -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-
-        <!-- Facebook -->
-        <a type="button" class="btn-floating btn-fb"><i class="fa fa-facebook"></i></a>
-        <!-- Twitter -->
-        <a type="button" class="btn-floating btn-tw"><i class="fa fa-twitter"></i></a>
-        <!-- Google +-->
-        <a type="button" class="btn-floating btn-gplus"><i class="fa fa-google-plus"></i></a>
-        <!-- Dribbble -->
-        <a type="button" class="btn-floating btn-dribbble"><i class="fa fa-dribbble"></i></a>
-
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
-
+  </body>
 </html>
-
