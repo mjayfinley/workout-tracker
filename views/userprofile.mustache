@@ -85,14 +85,12 @@
                 <td>Email:</td>
                 <td>{{email}}</td>
             </tr>
-
-
-            <a href='/userworkouts/{{id}}'>Add Workout</a>
-
-
             {{/users}}
           </tbody>
         </table>
+        <div class="flex-row">
+            <a class="card-link" href="/userworkouts/:{{id}}">Add Workout</a>
+        </div>
       </div>
   </div>
 </div>
