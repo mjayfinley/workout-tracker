@@ -172,8 +172,31 @@ app.post('/addUserWorkout', (req,res) => {
 })
 
 
+app.get('/logout', (req,res) => {
+  if(req.session.user && req.cookies.user_sid){
+    res.clearCookie('user_sid')
+    res.redirect('/')
+  }
+
+  else {
+    res.redirect('/')
+  }
+})
 
 
+app.post('/deleteWorkout', (req,res) => {
+
+  models.Workout.destroy({
+    where: {
+      id : req.body.deleteWorkout
+    }
+  })
+
+  .then(function(){
+    let userid = req.body.userId
+    res.redirect('/userworkouts/'+userid+'')
+  })
+})
 
 app.all('/*',sessionChecker, (req,res,next) => {
   next()

@@ -28,10 +28,19 @@
             Miles: {{miles}}
             Weight: {{weight}}
             Reps: {{reps}}
-            {{userid}}
+
+            <form action='/deleteWorkout' method='post'>
+              <input type="hidden" name="deleteWorkout" value={{id}}>
+              <input type="hidden" name="userId" value={{userid}}>
+              <input type='submit' value='Delete Workout'>
+            </form>
           </li>
         {{/workouts}}
+
+
       </ul>
     </div>
+
+    <a href='/logout'>Logout</a>
   </body>
 </html>
