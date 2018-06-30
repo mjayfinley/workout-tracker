@@ -19,15 +19,19 @@
 
     </form>
 
-
-    {{#workouts}}
-      {{exercise}}
-      {{time}}
-      {{miles}}
-      {{workout.weight}}
-      {{reps}}
-      {{userid}}
-    {{/workouts}}
-
+    <div>
+      <ul>
+        {{#workouts}}
+          <li>
+            Exercise: {{exercise}}
+            Time: {{time}}
+            Miles: {{miles}}
+            Weight: {{weight}}
+            Reps: {{reps}}
+            {{userid}}
+          </li>
+        {{/workouts}}
+      </ul>
+    </div>
   </body>
 </html>

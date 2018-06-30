@@ -51,9 +51,12 @@ var sessionChecker = (req,res,next) => {
 app.set('views','./views')
 app.set('view engine','mustache')
 
+
+
 app.get('/', (req,res) => {
   res.render('home')
 })
+
 
 
 app.post('/registerUser', (req,res) => {
@@ -137,14 +140,15 @@ app.get('/userworkouts/:id', (req,res) => {
 
   let userId = req.params.id
 
-  models.User.findOne({
+  models.Workout.findOne({
     where: {
-      id : userId
+      userid : userId
     }
   })
 
   .then(function(workouts){
-    res.render('userworkouts',{'workouts' : workouts})
+    console.log(workouts)
+    res.render('userworkouts',{'workouts' : workouts, userId : userId})
   })
 })
 
