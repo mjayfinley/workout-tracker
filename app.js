@@ -140,7 +140,7 @@ app.get('/userworkouts/:id', (req,res) => {
 
   let userId = req.params.id
 
-  models.Workout.findOne({
+  models.Workout.findAll({
     where: {
       userid : userId
     }
@@ -198,23 +198,9 @@ app.post('/deleteWorkout', (req,res) => {
   })
 })
 
-// about-us page
-
-app.get('/about-us',sessionChecker, (req,res) => {
-  res.render('about-us')
-})
-
-// things-todo page
-
-app.get('/things-todo',sessionChecker, (req,res) => {
-  res.render('things')
-})
-
 app.all('/*',sessionChecker, (req,res,next) => {
   next()
 })
-
-
 
 
 
