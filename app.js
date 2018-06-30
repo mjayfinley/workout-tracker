@@ -138,9 +138,9 @@ app.post('/userUpdateForm', (req,res) => {
 
 app.get('/userworkouts/:id', (req,res) => {
 
-  let userId = req.params.id
+  let userId = req.session.user.id
 
-  models.Workout.findOne({
+  models.Workout.findAll({
     where: {
       userid : userId
     }
@@ -148,7 +148,7 @@ app.get('/userworkouts/:id', (req,res) => {
 
   .then(function(workouts){
     console.log(workouts)
-    res.render('userworkouts',{'workouts' : workouts, userId : userId})
+    res.render('userworkouts',{'workouts' : workouts})
   })
 })
 
@@ -210,11 +210,10 @@ app.get('/things-todo',sessionChecker, (req,res) => {
   res.render('things')
 })
 
+
 app.all('/*',sessionChecker, (req,res,next) => {
   next()
 })
-
-
 
 
 

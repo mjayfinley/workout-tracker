@@ -42,15 +42,6 @@
 {{! Card }}
 <div class="container" id="profileContainer">
   <div class="card text-center">
-      {{! Image uploader }}
-        <div>
-          <form action="/addImage" method="post">
-            <img class="profile-pic" src="http://www.sbcs.edu.tt/wp-content/uploads/2016/04/profile-default.png" />
-            <div class="upload-button btn btn-mdb-color btn-rounded float-left">Add photo</div>
-            <input type="file" class="file-upload" name="imageURL" accept="image/*">
-          </form>
-        </div>
-        {{! Image uploader }}
       <h3 class="card-header primary-color white-text">
       {{#users}}{{firstname}} {{lastname}}{{/users}}
       </h3>
@@ -94,12 +85,14 @@
                 <td>Email:</td>
                 <td>{{email}}</td>
             </tr>
+
+
+            <a href='/userworkouts/{{id}}'>Add Workout</a>
+
+
             {{/users}}
-            </tbody>
+          </tbody>
         </table>
-        <div class="flex-row">
-              <a class="card-link" href='/userworkouts/{{id}}'>Add Workout</a>
-        </div>
       </div>
   </div>
 </div>
@@ -210,4 +203,3 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
 
 </html>
-
