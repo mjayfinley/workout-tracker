@@ -200,13 +200,13 @@ app.post('/deleteWorkout', (req,res) => {
 
 // about-us page
 
-app.get('/about-us',sessionChecker, (req,res) => {
+app.get('/about-us', (req,res) => {
   res.render('about-us')
 })
 
 // things-todo page
 
-app.get('/things-todo',sessionChecker, (req,res) => {
+app.get('/things-todo', (req,res) => {
   res.render('things')
 })
 
