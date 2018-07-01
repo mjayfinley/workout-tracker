@@ -65,14 +65,21 @@ app.post('/registerUser', (req,res) => {
       email : req.body.registerEmail,
       password : hash
     }
-
-    models.User.create(newUser).then(function(user){
-      req.session.user = user.dataValues
-      res.render('userinfoform')
+    models.User.findAll({
+      where: {
+        email : req.body.registerEmail,
+      }
     })
-
-    .catch(error => {
-      res.redirect('/')
+    .then(function(result) {
+      if (!result) {
+        models.User.create(newUser).then(function(user){
+          req.session.user = user.dataValues
+          res.render('userinfoform')
+        })
+      }
+      else {
+        res.render('userexists')
+      }
     })
   })
 })
@@ -98,8 +105,7 @@ app.post('/login',(req,res) => {
       }
 
       else {
-        res.redirect('/')
-        return
+        res.render('badlogin')
       }
     })
   })
@@ -132,6 +138,20 @@ app.post('/userUpdateForm', (req,res) => {
   .then(function(user) {
     user.update(updatedUser)
     res.render('userprofile', {'users' : user})
+  })
+})
+
+app.get('/userprofile', (req,res) => {
+  let userId = req.session.user.id
+
+  models.User.findOne({
+    where: {
+      id : userId
+    }
+  })
+
+  .then(function(user){
+    res.render('userprofile',{'users' : user})
   })
 })
 
@@ -175,7 +195,7 @@ app.post('/addUserWorkout', (req,res) => {
 app.get('/logout', (req,res) => {
   if(req.session.user && req.cookies.user_sid){
     res.clearCookie('user_sid')
-    res.redirect('/')
+    res.render('loggedout')
   }
 
   else {
@@ -217,9 +237,9 @@ app.all('/*',sessionChecker, (req,res,next) => {
 
 
 
-app.get('*', (req,res) => res.status(200).send({
-  message: 'Welcome',
-}))
+app.get('*', (req,res) => {
+  res.render('home')
+})
 
 
 app.listen(3000,function(){
