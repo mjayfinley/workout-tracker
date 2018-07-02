@@ -10,83 +10,148 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     </head>
 <body>
-  <!--Navbar-->
-  <nav class="navbar sticky-top navbar-light navbar-1 white">
+<!--Navbar-->
+<nav class="navbar sticky-top navbar-light navbar-1 white">
 
-      <!-- Navbar brand -->
-      <a class="navbar-brand" href="/">
-          <img src="gym-logo.png" width="100" height="70" class="d-inline-block align-top" alt=""></a>
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="/">
+        <img src="gym-logo.png" width="100" height="70" class="d-inline-block align-top" alt=""></a>
 
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15"
+        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent15">
 
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/about-us">About Us</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Things To Do</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/userprofile">My Account</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/logout" >Logout</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/login">Login/Register</a>
-              </li>
-          </ul>
-          <!-- Links -->
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Things To Do</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/userprofile">My Account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout" >Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login/Register</a>
+            </li>
+        </ul>
+        <!-- Links -->
 
-      </div>
-      <!-- Collapsible content -->
-   </nav>
+    </div>
+    <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
 
 <!--Main content-->
-
+<div class="container" id="mainContainer">
 <!--Body-->
 
-<h1 class="d-flex flex-row justify-content-center pt-4">Things To Do</h1>
+<h1 class="d-flex justify-content-center pt-4" style="padding: 2%;">Get Fit!</h1>
+<div class="container card" style="padding-top: 15px;">
 
-<!-- Card -->
-<div class="card card-cascade wider reverse">
 
-<!-- Card image -->
-  <div class="view view-cascade overlay">
-    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Card image cap">
-    <a href="#!">
-      <div class="mask rgba-white-slight"></div>
+<!--Carousel Wrapper-->
+<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active" id="mainContainer">
+            <!--Mask color-->
+            <div class="view">
+                <img class="d-block w-100" src="http://studiofitnessrockwall.com/wp-content/uploads/2017/02/SSP_7759-highres-1024x459.jpg" alt="First Slide">
+                <div class="mask rgba-black-slight"></div>
+            </div>
+            <div class="card-body-cascade text-center">
+                <div class="container" style="padding: 5%;">
+                <!-- Title -->
+                <h4 class="card-title"><strong><a href="https://www.studiofitness.org/">Studio Fitness - Heights</a></strong></h4>
+                <!-- Subtitle -->
+                <h6 class="font-weight-bold indigo-text py-2">Crossfit</h6>
+                <!-- Text -->
+                <p class="card-text">Studio Fitness is a neighborhood style gym designed and built to inspire both our members and trainers by providing them with the equipment and space necessary to pursue limitless fitness opportunities.</p>
+                <p class="card-text">Studio Fitness EaDo | 2215 Lawrence |
+                Houston, Texas 77008</p>
+                <p class="card-text">713-863-8414</p>
+                <p class="card-text">info@studiofitness.org</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item" id="mainContainer">
+            <!--Mask color-->
+            <div class="view">
+                <img class="d-block w-100" src="https://www.hermannpark.org/media/uploads/pages/.thumbnails/img_4631-680x400.jpg" alt="Second Slide">
+                <div class="mask rgba-black-slight"></div>
+            </div>
+            <div class="card-body-cascade text-center">
+                <div class="container" style="padding: 5%;">
+                <!-- Title -->
+                <h4 class="card-title"><strong><a href="https://www.hermannpark.org/visit/park-guides/fitness/">Hermann Park</a></strong></h4>
+                <!-- Subtitle -->
+                <h6 class="font-weight-bold indigo-text py-2">Running/Walking/Biking Trail in Downtown Houston, TX</h6>
+                <!-- Text -->
+                <p class="card-text">Hermann Park is a great place to come and stretch your legs. Joggers love following the 2-mile Marvin Taylor Trail around the golf course under the shade of the Park's historic live oaks. If you prefer cycling, check out a bike at the B-Cycle Station near Lake Plaza and ride over the Bill Coats Bridge to the Park's Urban Forest at Bayou Parkland. Don't forget to sign up for Run in the Park, Hermann Park Conservancy's annual 5K. Keep an eye out for registration information on our website.</p>
+                <p class="card-text">Hermann Park Conservancy | 1700 Hermann Drive | Houston, TX 77004</p>
+                <p class="card-text">713-524-5876</p>
+                <p class="card-text">info@hermannpark.org</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item" id="mainContainer">
+            <!--Mask color-->
+            <div class="view">
+                <img class="d-block w-100" src="http://www.chevronhoustonmarathon.com/wp-content/uploads/2018/03/Skechers-Ambassadors-118-300x200.jpg" alt="Third Slide">
+                <div class="mask rgba-black-slight"></div>
+            </div>
+            <div class="card-body-cascade text-center">
+                <div class="container" style="padding: 5%;">
+                <!-- Title -->
+                <h4 class="card-title"><strong><a href="http://www.chevronhoustonmarathon.com/">Chevron Houston Marathon</a></strong></h4>
+                <!-- Subtitle -->
+                <h6 class="font-weight-bold indigo-text py-2">Register to run at the Chevron Houston Marathon Houston, TX</h6>
+                <!-- Text -->
+                <p class="card-text">The Chevron Houston Marathon and Aramco Houston Half Marathon will take place on Sunday, January 20, 2019. The We Are Houston 5K will take place on Saturday, January 19, 2019.</p>
+                <p class="card-text">Houston Marathon Committee | 720 N. Post Oak Rd., Ste. 200 | Houston, TX 77024</p>
+                <p class="card-text">713.957.3453</p>
+                <p class="card-text">chevronhoustonmarathon.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
     </a>
-  </div>
-
-
-  <!-- Card content -->
-  <div class="card-body card-body-cascade text-center">
-
-    <!-- Title -->
-    <h4 class="card-title"><strong>Heritage Muay Thai</strong></h4>
-    <!-- Subtitle -->
-    <h6 class="font-weight-bold indigo-text py-2">High Intensity Martial Arts</h6>
-    <!-- Photo -->
-    <img style="width:550; height:350" src="10428296_264049120464045_8204996876198322226_o.jpg">
-    </br>
-    <!-- Text -->
-    <p class="card-text">Heritage Muay Thai is one of the largest training centers in Texas for students and practitioners of kickboxing.  They even offer a trial for $19.99 with free gloves!</p>
-    <p class="card-text">1612 Austin Street Houston, TX 77002</p>
-    <p class="card-text">713-658-0299</p>
-    <p class="card-text">info@mainstreetboxing.com</p>
-  </div>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
 
 </div>
-<!-- Card -->
+
+
+<!--/.Carousel Wrapper-->
+</div>
+</div>
 
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color lighten-3 pt-4 mt-4">
@@ -104,6 +169,7 @@
         <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
         <p>Organize your exercise routine with our simple yet powerful app.</p>
         <p>Join thegreatestfitnessapp and witness how others have become more dedicated to their workouts. </p>
+
       </div>
       <!-- Grid column -->
 
@@ -138,16 +204,11 @@
           <li><p><i class="fa fa-phone mr-3"></i> (281) 330-8004</p></li>
         </ul>
 
-      </div>
-
-
     </div>
     <!-- Grid row -->
 
   </div>
   <!-- Footer Links -->
-
-
 </body>
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -157,6 +218,4 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
-
-</body>
 </html>
