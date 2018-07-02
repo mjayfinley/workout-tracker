@@ -5,10 +5,10 @@ Create a space to keep track of workouts in a social environment.
 
 ### Build Status
 Currently functional-
-[x]CRUD for workouts and users
-[]Social network integration
-[]Location api for tracking gyms
-[]Fitbit integration for health tracking
+- [x] CRUD for workouts and users
+- [ ] Social network integration
+- [ ] Location api for tracking gyms
+- [ ] Fitbit integration for health tracking
 
 ### Technology Used
 Node.js
