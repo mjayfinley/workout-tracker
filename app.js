@@ -72,18 +72,21 @@ app.post('/registerUser', (req,res) => {
     if (result != null) {
       res.render('userexists')
     }
-  })
-  bcrypt.hash(req.body.registerPassword, 10, function(err, hash) {
-    let newUser = {
-      email : req.body.registerEmail,
-      password : hash
+    else {
+      bcrypt.hash(req.body.registerPassword, 10, function(err, hash) {
+        let newUser = {
+          email : req.body.registerEmail,
+          password : hash
+        }
+        models.User.create(newUser).then(function(user){
+          req.session.user = user.dataValues
+          res.render('userinfoform')
+        })
+      })
     }
-    models.User.create(newUser).then(function(user){
-      req.session.user = user.dataValues
-      res.render('userinfoform')
-    })
   })
 })
+
 
 
 
