@@ -60,30 +60,31 @@ app.get('/', (req,res) => {
 
 
 app.post('/registerUser', (req,res) => {
+
+  models.User.findOne({
+    where: {
+      email: req.body.registerEmail,
+    }
+  })
+
+  .then(function(result) {
+    console.log(result)
+    if (result != null) {
+      res.render('userexists')
+    }
+  })
   bcrypt.hash(req.body.registerPassword, 10, function(err, hash) {
     let newUser = {
       email : req.body.registerEmail,
       password : hash
     }
-    models.User.findAll({
-      where: {
-        email : req.body.registerEmail,
-      }
-    })
-    .then(function(result) {
-      console.log(result)
-      if (!result) {
-        models.User.create(newUser).then(function(user){
-          req.session.user = user.dataValues
-          res.render('userinfoform')
-        })
-      }
-      else {
-        res.render('userexists')
-      }
+    models.User.create(newUser).then(function(user){
+      req.session.user = user.dataValues
+      res.render('userinfoform')
     })
   })
 })
+
 
 
 
