@@ -71,6 +71,7 @@ app.post('/registerUser', (req,res) => {
       }
     })
     .then(function(result) {
+      console.log(result)
       if (!result) {
         models.User.create(newUser).then(function(user){
           req.session.user = user.dataValues
@@ -167,7 +168,6 @@ app.get('/userworkouts/:id', (req,res) => {
   })
 
   .then(function(workouts){
-    console.log(workouts)
     res.render('userworkouts',{'workouts' : workouts})
   })
 })
@@ -218,6 +218,45 @@ app.post('/deleteWorkout', (req,res) => {
   })
 })
 
+
+app.get('/editWorkout/:id', (req,res) => {
+
+  let id = req.params.id
+
+  models.Workout.findAll({
+    where: {
+      id : id
+    }
+  })
+  .then(function(workout){
+    res.render('edituserworkout', {'workout' : workout})
+  })
+})
+
+
+app.post('/editUserWorkout', (req,res) => {
+
+  let updatedWorkout = {
+    time: req.body.time,
+    miles: req.body.miles,
+    weight: req.body.weight,
+    reps: req.body.reps,
+  }
+
+  models.Workout.findOne({
+    where: {
+      exercise: req.body.exercise
+    }
+  })
+
+  .then(function(workout) {
+    workout.update(updatedWorkout)
+    let userid = workout.userid
+    res.redirect('/userworkouts/'+userid+'')
+  })
+})
+
+
 // about-us page
 
 app.get('/about-us', (req,res) => {
@@ -226,7 +265,7 @@ app.get('/about-us', (req,res) => {
 
 // things-todo page
 
-app.get('/things-todo', (req,res) => {
+app.get('/things', (req,res) => {
   res.render('things')
 })
 

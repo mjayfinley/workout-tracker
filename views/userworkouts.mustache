@@ -9,43 +9,50 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet" type="text/css">
   <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
-    </head>
+</head>
 <body>
-{{! NAVBAR }}
-<nav class="navbar sticky-top navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="gym-logo.png"  width="30" height="30" class="d-inline-block align-top" alt="">
-    The Greatest Fitness App of All Time
-  </a>
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/about-us">About Us</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/things-todo">Things To Do</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href='/userprofile'>My Profile</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href='/logout'>Logout</a>
-  </li>
-</ul>
-</nav>
-{{! END NAVBAR }}
+  <!--Navbar-->
+  <nav class="navbar sticky-top navbar-light navbar-1 white">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#">
+        <!-- <img src="gym-logo.png"  width="30" height="30" class="d-inline-block align-top" alt=""> -->
+        The Greatest Fitness App of All Time
+      </a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="/about-us">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/things">Things To Do</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/userprofile">My Account</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/logout">Logout</a>
+              </li>
+          </ul>
+          <!-- Links -->
+
+      </div>
+      <!-- Collapsible content -->
+
+   </nav>
 
 <h1 class="d-flex flex-row justify-content-center pt-4">Workouts</h1>
-<div class="container" id="workoutContainer">
+<div class="container" style="max-width: 500;">
 
 <!-- Default form group -->
  <form action="/addUserWorkout/{{id}}" method="post">
@@ -74,46 +81,119 @@
         <input type="text" class="form-control" name="miles" placeholder="Enter miles ran/swam/biked...">
     </div>
       <div class="form-group">
-      <input type='hidden' name='userId' value='{{id}}'>
-      <input type='submit' value="Add Workout">
+        <input type='hidden' name='userId' value='{{id}}'>
+        <input type='submit' value="Add Workout">
       </div>
 </form>
 
-<!-- Workout Upload -->
+
+</div>
+<h3 class="d-flex flex-row justify-content-center pt-4">Workout History</h3>
+<div class="card-body" id="workout">
+  <div class="row">
+     {{#workouts}}
+    <div class="col" style="max-width: 400;">
+    <div class="card">
+    <table class="table table-striped">
+        <tbody class="container text-center">
+        <tr>
+            <td>Exercise:</td>
+            <td>{{exercise}}</td>
+        </tr>
+        <tr>
+            <td>Time:</td>
+            <td>{{time}} minutes</td>
+        </tr>
+        <tr>
+            <td>Weight:</td>
+            <td>{{weight}} lbs</td>
+        </tr>
+        <tr>
+            <td>Reps:</td>
+            <td>{{reps}}</td>
+        </tr>
+        <tr>
+            <td>Miles:</td>
+            <td>{{miles}}</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    <form action='/deleteWorkout' method='post'>
+        <input type="hidden" name="deleteWorkout" value={{id}}>
+        <input type="hidden" name="userId" value={{userid}}>
+        <input type='submit' class="btn btn-danger" value='Delete Workout'>
+    </form>
+    <a href='/editWorkout/{{id}}' class="btn btn-primary">Edit Workout</a>
+
+    </div>
+    {{/workouts}}
+    </div>
+
 </div>
 
-<div class="card-body" id="workout">
-        <table class="table table-striped">
-            <tbody class="container text-center">
-            {{#workouts}}
-            <tr>
-                <td>Exercise:</td>
-                <td>{{exercise}}</td>
-            </tr>
-            <tr>
-                <td>Time:</td>
-                <td>{{time}} minutes</td>
-            </tr>
-            <tr>
-                <td>Weight:</td>
-                <td>{{weight}} lbs</td>
-            </tr>
-            <tr>
-                <td>Reps:</td>
-                <td>{{reps}}</td>
-            </tr>
-             <tr>
-                <td>Miles:</td>
-                <td>{{miles}}</td>
-            </tr>
-            <form action='/deleteWorkout' method='post'>
-              <input type="hidden" name="deleteWorkout" value={{id}}>
-              <input type="hidden" name="userId" value={{userid}}>
-              <input type='submit' value='Delete Workout'>
-            </form>
-            {{/workouts}}
-            </tbody>
-        </table>
-  </div>
-</body>
-</html>
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4 mt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+        <p>Organize your exercise routine with our simple yet powerful app.</p>
+        <p>Join thegreatestfitnessapp and witness how others have become more dedicated to their workouts. </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+        <ul class="list-unstyled">
+          <li><p><a href="/about-us">ABOUT US</a></p></li>
+          <li><p><a href="https://www.digitalcrafts.com/">Become a Builder</a></p></li>
+
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+        <ul class="list-unstyled">
+          <li><p><i class="fa fa-home mr-3"></i>3302 Canal St, Houston, TX 77003</p></li>
+          <li><p><i class="fa fa-envelope mr-3"></i> help@thegreatestfitnessapp.com</p></li>
+          <li><p><i class="fa fa-phone mr-3"></i> (281) 330-8004</p></li>
+        </ul>
+
+    </div>
+    <!-- Grid row -->
+
+   </div>
+  <!-- Footer Links -->
+ </body>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+ </html>

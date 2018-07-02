@@ -11,30 +11,41 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     </head>
   <body>
-  {{! NAVBAR }}
-<!-- Image and text -->
-    <nav class="navbar sticky-top navbar-light bg-light">
+    <!--Navbar-->
+  <nav class="navbar sticky-top navbar-light navbar-1 white">
+
+      <!-- Navbar brand -->
       <a class="navbar-brand" href="/">
-    <img src="gym-logo.png" width="100" height="70" class="d-inline-block align-top" alt="">
-      </a>
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about-us">About Us</a>
-      </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/things-todo">Things To Do</a>
-  </li>
-  <li class="nav-item">
-      <a class="nav-link modal-navbar" href="/login" data-toggle="modal" data-target="#modalRegisterForm">Login/Register</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/logout">Logout</a>
-  </li>
-</ul>
-</nav>
+          <img src="gym-logo.png" width="100" height="70" class="d-inline-block align-top" alt=""></a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/about-us">About Us</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="/things">Things To Do</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#panel7" data-toggle="modal" data-target="#modalRegisterForm">Login/Register</a>
+              </li>
+          </ul>
+          <!-- Links -->
+
+      </div>
+      <!-- Collapsible content -->
+
+   </nav>
+<!--/.Navbar-->
     <!--U/I Modal -->
 
 <!--Modal: Login / Register Form-->
@@ -134,7 +145,8 @@
     </div>
 </div>
 <!--Card-->
-<div class="card">
+<div class="container" id="mainContainer">
+  <div class="card" style="padding-top: 25px;">
 
     <!--Card image-->
     <div class="view overlay">
@@ -157,6 +169,7 @@
     </div>
 
 </div>
+</div>
 <!--/.Card-->
 </div>
 
@@ -170,7 +183,7 @@
     <div class="row">
 
       <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Content -->
         <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
@@ -213,27 +226,7 @@
         </ul>
 
       </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-
-        <!-- Social buttons -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-
-        <!-- Facebook -->
-        <a type="button" class="btn-floating btn-fb"><i class="fa fa-facebook"></i></a>
-        <!-- Twitter -->
-        <a type="button" class="btn-floating btn-tw"><i class="fa fa-twitter"></i></a>
-        <!-- Google +-->
-        <a type="button" class="btn-floating btn-gplus"><i class="fa fa-google-plus"></i></a>
-        <!-- Dribbble -->
-        <a type="button" class="btn-floating btn-dribbble"><i class="fa fa-dribbble"></i></a>
-
-      </div>
-      <!-- Grid column -->
+    
 
     </div>
     <!-- Grid row -->

@@ -10,30 +10,39 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     </head>
 <body>
-{{! NAVBAR }}
-<nav class="navbar sticky-top navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="gym-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    The Greatest Fitness App of All Time
-  </a>
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link">About Us</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/things-todo">Things To Do</a>
-  </li>
-  <li>
-    <a class="nav-link" href='/userprofile'>My Profile</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href='/logout'>Logout</a>
-  </li>
-</ul>
-</nav>
+<!--Navbar-->
+<nav class="navbar sticky-top navbar-light navbar-1 white">
+
+     <!-- Navbar brand -->
+     <a class="navbar-brand" href="/">
+         <img src="gym-logo.png" width="100" height="70" class="d-inline-block align-top" alt=""></a>
+
+    <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+     <!-- Collapsible content -->
+     <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/about-us">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/things">Things To Do</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#panel7" data-toggle="modal" data-target="#modalRegisterForm">Login/Register</a>
+              </li>
+          </ul>
+          <!-- Links -->
+
+      </div>
+      <!-- Collapsible content -->
+  </nav>
 {{! END NAVBAR }}
 <h1 class="d-flex flex-row justify-content-center pt-4">About Us</h1>
 
@@ -52,7 +61,7 @@
 
     <!-- Grid column -->
     <div class="col-lg-5 text-center text-lg-left">
-      <img  class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/screens-section.jpg" alt="Sample image">
+      <img  class="img-fluid" src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Running/620/What+is+Maximalist+Running+620.jpg" alt="Sample image">
     </div>
     <!-- Grid column -->
 
@@ -135,8 +144,7 @@
  <!-- Section heading -->
   <h2 class="h1-responsive font-weight-bold my-5 maintitle">Formation Testimonials</h2>
   <!-- Section description -->
-  <p class="dark-grey-text w-responsive mx-auto mb-5">Since 2018 we've served over 1,000 users in Harris County.  Read their experiences below.</p>
-
+<p class="dark-grey-text w-responsive mx-auto mb-5">Since the dawn of time, we've served over 1,000 users in Harris County.  Read their experiences below.</p>
   <!--Grid row-->
   <div class="row text-center">
 
@@ -146,12 +154,11 @@
       <div class="testimonial">
         <!--Avatar-->
         <div class="avatar mx-auto">
-          <img src="Headshot1.jpg" class="rounded-circle z-depth-1 img-fluid">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/JJWatt.jpg/200px-JJWatt.jpg" class="rounded-circle z-depth-1 img-fluid">
         </div>
         <!--Content-->
-        <h4 class="font-weight-bold dark-grey-text mt-4">Alyssa Dunbar</h4>
-        <h6 class="font-weight-bold blue-text my-3">Senior Account Manager, Baker Hughes</h6>
-        <p class="font-weight-normal dark-grey-text">
+        <h4 class="font-weight-bold dark-grey-text mt-4">J.J. Watt</h4>
+        <h6 class="font-weight-bold blue-text my-3">NFL - Houston Texans<br><p>4x Pro Bowl, 3x NFL Defensive Player of the Year (2012, 2014, 2015)</p></h6>
           <i class="fa fa-quote-left pl-2 ml-1"></i>"I've followed fitness plans for years, but never seemed to maintain the results.  With Formation this was no longer the case:  All your achievements stored in a single place, set side-by-side to give you a portrait of your progress.  I no longer have to guess if I'm on the right track."</i</p>
         <!--Review-->
         <div class="orange-text">
@@ -172,14 +179,14 @@
       <div class="testimonial">
         <!--Avatar-->
         <div class="avatar mx-auto">
-          <img src="headshot2.jpg" class="rounded-circle z-depth-1 img-fluid">
+         <img src="https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1440,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1529988615/180625-james-harden-nba-mvp-cheat_hkfcd3" class="rounded-circle z-depth-1 img-fluid">
         </div>
         <!--Content-->
-        <h4 class="font-weight-bold dark-grey-text mt-4">Taylor Finkelstein</h4>
-        <h6 class="font-weight-bold blue-text my-3">Financial Analyst, JP Morgan</h6>
+        <h4 class="font-weight-bold dark-grey-text mt-4">James Harden</h4>
+        <h6 class="font-weight-bold blue-text my-3">NBA - Houston Rockets<br><p>MVP(2018), 6x NBA All-Star</p></h6>
+         <p class="font-weight-normal dark-grey-text">
         <p class="font-weight-normal dark-grey-text">
-          <i class="fa fa-quote-left pr-2"></i>Formation syncs perfectly with the professional.</p>
-        <!--Review-->
+          <i class="fa fa-quote-left pr-2"></i>I couldn't achieve such greatness if it wasn't for this phenomenal life changing app.</p>        <!--Review-->
         <div class="orange-text">
           <i class="fa fa-star"> </i>
           <i class="fa fa-star"> </i>
@@ -198,14 +205,13 @@
       <div class="testimonial">
         <!--Avatar-->
         <div class="avatar mx-auto">
-          <img src="headshot3.jpg" class="rounded-circle z-depth-1 img-fluid">
+          <img src="http://www.dailyherald.com/storyimage/DA/20180319/sports/303199950/AR/0/AR-303199950.jpg&updated=201803191552&MaxW=800&maxH=800&noborder" class="rounded-circle z-depth-1 img-fluid">
         </div>
         <!--Content-->
-        <h4 class="font-weight-bold dark-grey-text mt-4">Julia Broadman</h4>
-        <h6 class="font-weight-bold blue-text my-3">Freelance Photographer</h6>
+        <h4 class="font-weight-bold dark-grey-text mt-4">Jose Altuve</h4>
+        <h6 class="font-weight-bold blue-text my-3">MLB - Houston Astros<br><p>2017 World Series Champion, AL MVP (2017)</p></h6>
         <p class="font-weight-normal dark-grey-text">
-          <i class="fa fa-quote-left pr-2"></i>"My schedule often prevents me from keeping track of my workouts.  Since using Formation: Houston I've had my best body for over a year!"</p>
-        <!--Review-->
+          <i class="fa fa-quote-left pr-2"></i>Esta es la mejor aplicación que he usado. No sería un Campeón del Mundo si no fuera por esta aplicación</p>        <!--Review-->
         <div class="orange-text">
           <i class="fa fa-star"> </i>
           <i class="fa fa-star"> </i>
@@ -222,5 +228,72 @@
   <!--Grid row-->
 
 </section>
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4 mt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+        <p>Organize your exercise routine with our simple yet powerful app.</p>
+        <p>Join thegreatestfitnessapp and witness how others have become more dedicated to their workouts. </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+        <ul class="list-unstyled">
+          <li><p><a href="/about-us">ABOUT US</a></p></li>
+          <li><p><a href="https://www.digitalcrafts.com/">Become a Builder</a></p></li>
+
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+        <ul class="list-unstyled">
+          <li><p><i class="fa fa-home mr-3"></i>3302 Canal St, Houston, TX 77003</p></li>
+          <li><p><i class="fa fa-envelope mr-3"></i> help@thegreatestfitnessapp.com</p></li>
+          <li><p><i class="fa fa-phone mr-3"></i> (281) 330-8004</p></li>
+        </ul>
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+ </body>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+ </html>
 </body>
 </html>

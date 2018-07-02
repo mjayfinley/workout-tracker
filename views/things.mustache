@@ -10,31 +10,39 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     </head>
 <body>
-{{! NAVBAR }}
-<nav class="navbar sticky-top navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="gym-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    The Greatest Fitness App of All Time
-  </a>
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href='/about-us'>About Us</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/things-todo">Things To Do</a>
-  </li>
-  <li>
-    <a class="nav-link" href='/userprofile'>My Profile</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href='/logout'>Logout</a>
-  </li>
-</ul>
-</nav>
-{{! END NAVBAR }}
+  <!--Navbar-->
+  <nav class="navbar sticky-top navbar-light navbar-1 white">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="/">
+          <img src="gym-logo.png" width="100" height="70" class="d-inline-block align-top" alt=""></a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/about-us">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/things">Things To Do</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#panel7" data-toggle="modal" data-target="#modalRegisterForm">Login/Register</a>
+              </li>
+          </ul>
+          <!-- Links -->
+
+      </div>
+      <!-- Collapsible content -->
+   </nav>
 
 <!--Main content-->
 
@@ -80,13 +88,12 @@
     <div class="row">
 
       <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Content -->
         <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
-        <p>Here you can use rows and columns here to organize your footer content.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum.</p>
-
+        <p>Organize your exercise routine with our simple yet powerful app.</p>
+        <p>Join thegreatestfitnessapp and witness how others have become more dedicated to their workouts. </p>
       </div>
       <!-- Grid column -->
 
@@ -99,10 +106,9 @@
         <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
 
         <ul class="list-unstyled">
-          <li><p><a href="#!">PROJECTS</a></p></li>
-          <li><p><a href="#!">ABOUT US</a></p></li>
-          <li><p><a href="#!">BLOG</a></p></li>
-          <li><p><a href="#!">AWARDS</a></p></li>
+          <li><p><a href="/about-us">ABOUT US</a></p></li>
+          <li><p><a href="https://www.digitalcrafts.com/">Become a Builder</a></p></li>
+
         </ul>
 
       </div>
@@ -123,27 +129,7 @@
         </ul>
 
       </div>
-      <!-- Grid column -->
 
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-
-        <!-- Social buttons -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-
-        <!-- Facebook -->
-        <a type="button" class="btn-floating btn-fb"><i class="fa fa-facebook"></i></a>
-        <!-- Twitter -->
-        <a type="button" class="btn-floating btn-tw"><i class="fa fa-twitter"></i></a>
-        <!-- Google +-->
-        <a type="button" class="btn-floating btn-gplus"><i class="fa fa-google-plus"></i></a>
-        <!-- Dribbble -->
-        <a type="button" class="btn-floating btn-dribbble"><i class="fa fa-dribbble"></i></a>
-
-      </div>
-      <!-- Grid column -->
 
     </div>
     <!-- Grid row -->
@@ -151,28 +137,6 @@
   </div>
   <!-- Footer Links -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-<!-- <div id='registerDiv'>
-  <form action='/registerUser' method="POST">
-    <input type='text' name='email'>
-    <input type='password' name='password'>
-    <input type='submit' value="Register">
-  </form>
-</div>
-<div id='loginDiv'>
-  <form action='/login' method="POST">
-    <input type='text' name='loginEmail'>
-    <input type='password' name='loginPassword'>
-    <input type="submit" value="Login">
-  </form>
-</div> -->
 
 </body>
 <!-- JQuery -->

@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>User Workouts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+  <!-- JQuery -->
+
+    </head>
+<body>
+{{! NAVBAR }}
+<nav class="navbar sticky-top navbar-light navbar-1 white">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">
+      <!-- <img src="gym-logo.png"  width="30" height="30" class="d-inline-block align-top" alt=""> -->
+      The Greatest Fitness App of All Time
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/things">Things To Do</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/userprofile">My Account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+        </ul>
+        <!-- Links -->
+
+    </div>
+    <!-- Collapsible content -->
+
+ </nav>
+{{! END NAVBAR }}
+{{#workout}}
+<h1 class="d-flex flex-row justify-content-center pt-4">Editing your {{exercise}}</h1>
+{{/workout}}
+<div class="container" id="workoutContainer">
+
+<!-- Default form group -->
+ <form action="/editUserWorkout" method="post">
+    <!-- Type of exercise input -->
+    <div class="form-group">
+        {{#workout}}<!-- <label for="formGroupExampleInput">Type of exercise:</label> -->
+        <input type="hidden" class="form-control" name="exercise" value="{{exercise}}">
+        {{/workout}}
+    </div>
+    <!-- Time input -->
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Amount of time (minutes):</label>
+        <input type="text" class="form-control" name="time" placeholder="Enter time doing exercise in minutes...">
+    </div>
+    <!-- Weight input -->
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Amount of weight (pounds):</label>
+        <input type="text" class="form-control" name="weight" placeholder="Enter weight in pounds...">
+    </div>
+    <!-- Reps input -->
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Amount of reps:</label>
+        <input type="text" class="form-control" name="reps" placeholder="Enter number of reps...">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Miles ran/swam/biked:</label>
+        <input type="text" class="form-control" name="miles" placeholder="Enter miles ran/swam/biked...">
+    </div>
+      <div class="form-group">
+      <input type='hidden' name='userId' value='{{id}}'>
+      <input type='submit' value="Confirm Edit">
+      </div>
+</form>
+
+<!-- Workout Upload -->
+</div>
+
+<div class="card-body" id="workoutdiv">
+        <table class="table table-striped">
+            <tbody class="container text-center">
+            {{#workout}}
+            <tr>
+                <td>Exercise:</td>
+                <td>{{exercise}}</td>
+            </tr>
+            <tr>
+                <td>Time:</td>
+                <td>{{time}} minutes</td>
+            </tr>
+            <tr>
+                <td>Weight:</td>
+                <td>{{weight}} lbs</td>
+            </tr>
+            <tr>
+                <td>Reps:</td>
+                <td>{{reps}}</td>
+            </tr>
+             <tr>
+                <td>Miles:</td>
+                <td>{{miles}}</td>
+            </tr>
+
+
+            {{/workout}}
+            </tbody>
+        </table>
+  </div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+</html>

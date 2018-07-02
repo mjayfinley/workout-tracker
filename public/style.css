@@ -63,8 +63,8 @@
 /* Title */
 
 #mainContainer {
-    max-width: 550px;
-    padding: 20px;
+    max-width: 800px;
+    padding: 25px;
 }
 
 #workoutContainer {
@@ -73,7 +73,7 @@
 
 /*Page Headers*/
 
-.maintitle {
-
-
+#profileContainer {
+  max-width: 550px;
+  padding-top: 25px;
 }
