@@ -101,18 +101,24 @@ app.post('/login',(req,res) => {
     }
   })
   .then(function(user) {
-    bcrypt.compare(req.body.loginPassword, user.password, function(err, result) {
-      if(result) {
-        if(req.session) {
-          req.session.user = user.dataValues
-        }
-        res.render('userprofile', {'users' : user})
-      }
+    if (user == null) {
+      res.render('badlogin')
+    }
 
-      else {
-        res.render('badlogin')
-      }
-    })
+    else {
+      bcrypt.compare(req.body.loginPassword, user.password, function(err, result) {
+        if(result) {
+          if(req.session) {
+            req.session.user = user.dataValues
+          }
+          res.render('userprofile', {'users' : user})
+        }
+
+        else {
+          res.render('badlogin')
+        }
+      })
+    }
   })
 })
 
