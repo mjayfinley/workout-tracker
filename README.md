@@ -11,11 +11,11 @@ Currently functional-
 - [ ] Fitbit integration for health tracking
 
 ### Technology Used
-Node.js
-Express
-Postgresql
-Mustache
-Bcrypt
+- Node.js
+- Express
+- Postgresql
+- Mustache
+- Bcrypt
 
 ### Hosted on Heroku
 https://houston-workout-tracker.herokuapp.com/
