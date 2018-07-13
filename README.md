@@ -18,4 +18,4 @@ Currently functional-
 - Bcrypt
 
 ### Hosted on Heroku
-https://houston-workout-tracker.herokuapp.com/
+https://workout-tracker-houston.herokuapp.com/
